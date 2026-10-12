@@ -13,7 +13,7 @@ Bisulfite sequencing of a 19-amplicon panel in CD4+ and CD8+ cells, before and a
 | `postanalysis/postprocess_dss.R` | Paired DSS models, Q3 and per-gene ASIT/GIPP plots | Current postanalysis |
 | `postanalysis/postprocess_dss_all_genes_archive.R` | One-sample t-tests of paired methylation differences for Q1/Q2, DSS for Q3 and coverage-weighted global plots | Historical alternative method |
 
-All distinct executable routes from the supplied archive are retained. Generated samplesheets and duplicate metadata are regenerated from the shared design. `down` and `git` were empty. The screenshots also show `all_contigs.txt`, which was absent from the archive; neither R script reads it.
+Historical routes are retained for comparison. Samplesheets and metadata can be regenerated from the shared design.
 
 ## Samples and reference
 
@@ -99,7 +99,7 @@ bash run_realign_hg38.sh
 
 `ONLY_SAMPLE_IDS` or `ONLY_SAMPLES_FILE` restricts the inputs. The default excludes `Undetermined`, `hla4` and `hla5`. `PARTITION` sets the submitted partition and `ARRAY_CONCURRENCY` defaults to 10. Each task requests 16 CPUs and 128 GB; the default Bismark instance count is one quarter of the allocation because each instance launches additional workers. These BAMs are diagnostic outputs and do not replace the panel coverage files.
 
-## Checks and changes from the uploaded archive
+## Validation and methodological notes
 
 ```bash
 python -m unittest discover -s tests -v
@@ -108,7 +108,7 @@ Rscript tests/test_postprocess.R
 
 The tests use temporary synthetic files. They check the panel sequence hash, all 66 metadata assignments, lane discovery, missing mates, sample exclusions and Nextflow options/exit status. R checks exercise paired sample selection and both postanalysis methods on synthetic coverage. No biological results are shipped with the source code.
 
-Cleanup removes Jupyter checkpoints, generated absolute-path samplesheets and redundant launch notes. Historical analysis scripts remain in their original directories. Functional corrections in the current workflow restore GIPP patients 1/7/10, use BH-adjusted significance with the agreed 0.05 effect cutoff, filter CD4 and CD8 pairs correctly, name BSseq samples explicitly and restrict pairing to available coverage inputs. The hg38 baseline now resolves its own script directory and honors `RESUME`; its model and directional setting are retained. These corrections can change results relative to the uploaded scripts. Real-data reruns are required to establish biological conclusions.
+The current workflow assigns patients 1/7/10 to GIPP, uses BH-adjusted significance with a 0.05 effect cutoff, filters CD4 and CD8 pairs, names BSseq samples explicitly and restricts pairing to available coverage inputs. The hg38 baseline now resolves its own script directory and honors `RESUME`; its model and directional setting are retained. These corrections can change results relative to the uploaded scripts. Real-data reruns are required to establish biological conclusions.
 
 The historical R alternative preserves its original statistics and global weighting. Its Q1 effect is CD8 minus CD4 and Q2 is after minus before, opposite to the current tables. It does not produce the therapy-stratified gene plots. Sites with constant paired differences can make the original t-test fail. Run it explicitly into a separate results directory:
 
