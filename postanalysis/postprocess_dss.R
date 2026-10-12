@@ -54,7 +54,7 @@ if (!all(grepl("^patient_[0-9]+$", meta[group == "patient", patient_id]))) stop(
 if (anyDuplicated(meta[, .(patient_id, cell_type, timepoint)])) stop("Duplicate patient/cell/timepoint rows")
 
 meta[group == "patient", patient_num := as.integer(sub("patient_", "", patient_id))]
-meta[group == "patient", therapy := ifelse(patient_num %in% c(1, 7, 10), "GIPP", "ASIT")]
+meta[group == "patient", therapy := ifelse(patient_num %in% c(13, 14, 15), "GIPP", "ASIT")]
 meta[group == "control", therapy := "control"]
 
 cov_files <- list.files(outdir, pattern="\\.cov\\.gz$", recursive=TRUE, full.names=TRUE)
