@@ -1,0 +1,67 @@
+sample_id	number	patient_id	cell_type	timepoint	group
+hla1	1	patient_1	CD4+	before	patient
+hla2	2	patient_1	CD8+	before	patient
+hla3	3	patient_1	CD4+	after	patient
+hla4	4	patient_1	CD8+	after	patient
+hla5	5	patient_2	CD4+	before	patient
+hla6	6	patient_2	CD8+	before	patient
+hla7	7	patient_2	CD4+	after	patient
+hla8	8	patient_2	CD8+	after	patient
+hla9	9	patient_3	CD4+	before	patient
+hla10	10	patient_3	CD8+	before	patient
+hla11	11	patient_3	CD4+	after	patient
+hla12	12	patient_3	CD8+	after	patient
+hla13	13	patient_4	CD4+	before	patient
+hla14	14	patient_4	CD8+	before	patient
+hla15	15	patient_4	CD4+	after	patient
+hla16	16	patient_4	CD8+	after	patient
+hla17	17	patient_5	CD4+	before	patient
+hla18	18	patient_5	CD8+	before	patient
+hla19	19	patient_5	CD4+	after	patient
+hla20	20	patient_5	CD8+	after	patient
+hla21	21	patient_6	CD4+	before	patient
+hla22	22	patient_6	CD8+	before	patient
+hla23	23	patient_6	CD4+	after	patient
+hla24	24	patient_6	CD8+	after	patient
+hla25	25	patient_7	CD4+	before	patient
+hla26	26	patient_7	CD8+	before	patient
+hla27	27	patient_7	CD4+	after	patient
+hla28	28	patient_7	CD8+	after	patient
+hla29	29	patient_8	CD4+	before	patient
+hla30	30	patient_8	CD8+	before	patient
+hla31	31	patient_8	CD4+	after	patient
+hla32	32	patient_8	CD8+	after	patient
+hla33	33	patient_9	CD4+	before	patient
+hla34	34	patient_9	CD8+	before	patient
+hla35	35	patient_9	CD4+	after	patient
+hla36	36	patient_9	CD8+	after	patient
+hla37	37	patient_10	CD4+	before	patient
+hla38	38	patient_10	CD8+	before	patient
+hla39	39	patient_10	CD4+	after	patient
+hla40	40	patient_10	CD8+	after	patient
+hla41	41	patient_11	CD4+	before	patient
+hla42	42	patient_11	CD8+	before	patient
+hla43	43	patient_11	CD4+	after	patient
+hla44	44	patient_11	CD8+	after	patient
+hla45	45	patient_12	CD4+	before	patient
+hla46	46	patient_12	CD8+	before	patient
+hla47	47	patient_12	CD4+	after	patient
+hla48	48	patient_12	CD8+	after	patient
+hla49	49	patient_13	CD4+	before	patient
+hla50	50	patient_13	CD8+	before	patient
+hla51	51	patient_13	CD4+	after	patient
+hla52	52	patient_13	CD8+	after	patient
+hla53	53	patient_14	CD4+	before	patient
+hla54	54	patient_14	CD8+	before	patient
+hla55	55	patient_14	CD4+	after	patient
+hla56	56	patient_14	CD8+	after	patient
+hla57	57	patient_15	CD4+	before	patient
+hla58	58	patient_15	CD8+	before	patient
+hla59	59	patient_15	CD4+	after	patient
+hla60	60	patient_15	CD8+	after	patient
+hla61	61	control_1	CD4+		control
+hla62	62	control_1	CD8+		control
+hla63	63	control_2	CD4+		control
+hla64	64	control_2	CD8+		control
+hla65	65	control_3	CD4+		control
+hla66	66	control_3	CD8+		control

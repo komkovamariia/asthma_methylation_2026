@@ -1,0 +1,12 @@
+name: asthma_methylseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pandas
+  - nextflow=25.04
+  - openjdk=17
+  - bismark=0.25.1
+  - bowtie2
+  - samtools

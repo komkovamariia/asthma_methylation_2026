@@ -1,0 +1,14 @@
+name: asthma_methylseq_post
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.3
+  - r-optparse
+  - r-ggplot2
+  - r-ggrepel
+  - r-pheatmap
+  - r-data.table
+  - bioconductor-bsseq
+  - bioconductor-dss
+  - bioconductor-genomicranges
